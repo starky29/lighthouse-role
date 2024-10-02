@@ -1,7 +1,7 @@
 Lighthouse
 =========
 
-Install Vector on Centos
+Install Lighthouse on Centos
 
 Role Variables
 --------------
