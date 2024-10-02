@@ -1,6 +1,8 @@
 ---
-- import_task: install_nginx.yml
-- import_task: install_git.yml
+- name: Install nginx
+  ansible.builtin.import_tasks: install_nginx.yml
+- name: Install git
+  ansible.builtin.import_tasks: install_git.yml
 - name: Lighthouse | cp from git
   become: true
   ansible.builtin.git:
@@ -8,3 +10,4 @@
     version: master
     dest: "{{ lighthouse_dir }}"
   notify: Start nginx service
+  
